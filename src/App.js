@@ -8,6 +8,8 @@ import Header from "./Pages/Shared/Header/Header";
 import NotFound from "./Pages/Shared/NotFound/NotFound";
 import Login from "./Pages/Login/Login";
 import Singup from "./Pages/Login/Singup";
+import CheckOut from "./Pages/CheckOut/CheckOut";
+import RequerAuth from "./Pages/Shared/RequerAuth/RequerAuth";
 
 function App() {
   return (
@@ -20,6 +22,14 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Singup />} />
+        <Route
+          path="/checkout"
+          element={
+            <RequerAuth>
+              <CheckOut />
+            </RequerAuth>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer></Footer>

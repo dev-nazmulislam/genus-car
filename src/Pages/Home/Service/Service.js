@@ -6,8 +6,8 @@ const Service = ({ service }) => {
   const { id, name, img, description, price } = service;
   const navigate = useNavigate();
   return (
-    <div className="service">
-      <img className="w-100" src={img} alt="" />
+    <div className="service p-3">
+      <img className="w-100 rounded" src={img} alt="" />
       <h2>{name}</h2>
       <p>Price: {price}</p>
       <p>
